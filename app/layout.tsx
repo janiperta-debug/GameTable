@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   title: "GameTable - Your Exclusive Gaming Manor",
   description:
     "Step into an elegant sanctuary where tabletop enthusiasts gather to discover remarkable games, forge lasting friendships, and create unforgettable gaming experiences.",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -50,7 +50,7 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         <AppThemeProvider>
-          <div className="min-h-screen room-environment main-hall-bg-pattern" data-theme="main-hall">
+          <div className="min-h-screen room-environment">
             <Navigation />
             <main>{children}</main>
           </div>

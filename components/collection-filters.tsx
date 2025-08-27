@@ -3,13 +3,6 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Slider } from "@/components/ui/slider"
 import { Label } from "@/components/ui/label"
 
-const categories = [
-  { id: "board-games", label: "Board Games", count: 189 },
-  { id: "rpgs", label: "RPGs", count: 34 },
-  { id: "miniatures", label: "Miniatures", count: 24 },
-  { id: "card-games", label: "Card Games", count: 45 },
-]
-
 const mechanics = [
   { id: "worker-placement", label: "Worker Placement", count: 23 },
   { id: "deck-building", label: "Deck Building", count: 18 },
@@ -21,23 +14,6 @@ const mechanics = [
 export function CollectionFilters() {
   return (
     <div className="space-y-6">
-      <Card className="room-furniture">
-        <CardHeader>
-          <CardTitle className="ornate-text font-heading text-lg font-bold">Categories</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {categories.map((category) => (
-            <div key={category.id} className="flex items-center space-x-2">
-              <Checkbox id={category.id} />
-              <Label htmlFor={category.id} className="flex-1 text-sm font-body">
-                {category.label}
-              </Label>
-              <span className="text-xs text-muted-foreground font-body">({category.count})</span>
-            </div>
-          ))}
-        </CardContent>
-      </Card>
-
       <Card className="room-furniture">
         <CardHeader>
           <CardTitle className="ornate-text font-heading text-lg font-bold">Player Count</CardTitle>

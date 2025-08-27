@@ -1,64 +1,42 @@
 "use client"
 
 import { useState } from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BoardGamesTab } from "@/components/board-games-tab"
-import { RPGsTab } from "@/components/rpgs-tab"
-import { MiniaturesTab } from "@/components/miniatures-tab"
-import { TradingCardsTab } from "@/components/trading-cards-tab"
-import { Dice6, Target, Swords, CreditCard } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+
+const categories = [
+  { id: "all", label: "All Games", count: 247 },
+  { id: "board-games", label: "Board Games", count: 189 },
+  { id: "rpgs", label: "RPGs", count: 34 },
+  { id: "miniatures", label: "Miniatures", count: 24 },
+  { id: "trading-cards", label: "Trading Cards", count: 12 },
+]
 
 export function GameCategoryTabs() {
-  const [activeTab, setActiveTab] = useState("board-games")
+  const [activeCategory, setActiveCategory] = useState("all")
 
   return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-      <TabsList className="grid w-full grid-cols-4 mb-8 bg-surface-light/50">
-        <TabsTrigger
-          value="board-games"
-          className="flex items-center space-x-2 data-[state=active]:theme-accent-gold font-body"
-        >
-          <Dice6 className="h-4 w-4" />
-          <span>Board Games</span>
-        </TabsTrigger>
-        <TabsTrigger
-          value="rpgs"
-          className="flex items-center space-x-2 data-[state=active]:theme-accent-gold font-body"
-        >
-          <Target className="h-4 w-4" />
-          <span>RPGs</span>
-        </TabsTrigger>
-        <TabsTrigger
-          value="miniatures"
-          className="flex items-center space-x-2 data-[state=active]:theme-accent-gold font-body"
-        >
-          <Swords className="h-4 w-4" />
-          <span>Miniatures</span>
-        </TabsTrigger>
-        <TabsTrigger
-          value="trading-cards"
-          className="flex items-center space-x-2 data-[state=active]:theme-accent-gold font-body"
-        >
-          <CreditCard className="h-4 w-4" />
-          <span>Trading Cards</span>
-        </TabsTrigger>
-      </TabsList>
-
-      <TabsContent value="board-games">
-        <BoardGamesTab />
-      </TabsContent>
-
-      <TabsContent value="rpgs">
-        <RPGsTab />
-      </TabsContent>
-
-      <TabsContent value="miniatures">
-        <MiniaturesTab />
-      </TabsContent>
-
-      <TabsContent value="trading-cards">
-        <TradingCardsTab />
-      </TabsContent>
-    </Tabs>
+    <Card className="room-furniture">
+      <CardContent className="p-4">
+        <div className="flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <Button
+              key={category.id}
+              variant={activeCategory === category.id ? "default" : "outline"}
+              size="sm"
+              onClick={() => setActiveCategory(category.id)}
+              className={
+                activeCategory === category.id
+                  ? "bg-accent-gold text-surface-dark hover:bg-accent-copper font-cinzel"
+                  : "border-accent-gold/20 text-accent-gold hover:bg-accent-gold/10 font-cinzel"
+              }
+            >
+              {category.label}
+              <span className="ml-2 text-xs opacity-70">({category.count})</span>
+            </Button>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
   )
 }

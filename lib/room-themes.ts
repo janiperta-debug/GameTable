@@ -53,7 +53,7 @@ export const roomThemes: RoomTheme[] = [
     unlockLevel: 10,
     category: "Ground Floor",
     isActive: false,
-    isUnlocked: true,
+    isUnlocked: true, // Temporarily unlocked for testing
   },
   {
     id: "conservatory",
@@ -70,7 +70,7 @@ export const roomThemes: RoomTheme[] = [
     unlockLevel: 15,
     category: "Ground Floor",
     isActive: false,
-    isUnlocked: false,
+    isUnlocked: true, // Temporarily unlocked for testing
     canUnlock: true,
   },
   {
@@ -79,17 +79,17 @@ export const roomThemes: RoomTheme[] = [
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fireside%20Lounge%2001.jpg-M3u72S7v7OEudxT8hqP812tt9gR2Jb.jpeg",
     colors: {
-      primary: "#D2691E", // Terracotta
-      secondary: "#8B4513", // Rich brown leather
-      accent: "#DAA520", // Golden firelight
-      background: "#FFF8DC", // Cornsilk
+      primary: "#1C1C1C", // Obsidian (dark charcoal)
+      secondary: "#708090", // Steel gray
+      accent: "#FF4500", // Orange fire
+      background: "#2F2F2F", // Dark stone
     },
-    description: "Warm terracotta tones by the crackling fireplace",
-    atmosphere: "Cozy and intimate",
+    description: "Dramatic obsidian and steel with flickering orange flames",
+    atmosphere: "Dark and sophisticated",
     unlockLevel: 20,
     category: "Ground Floor",
     isActive: false,
-    isUnlocked: false,
+    isUnlocked: true, // Temporarily unlocked for testing
     canUnlock: true,
   },
   {
@@ -107,7 +107,7 @@ export const roomThemes: RoomTheme[] = [
     unlockLevel: 25,
     category: "Ground Floor",
     isActive: false,
-    isUnlocked: false,
+    isUnlocked: true, // Temporarily unlocked for testing
     canUnlock: true,
   },
   {
@@ -116,17 +116,17 @@ export const roomThemes: RoomTheme[] = [
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Garden%2002.jpg-XxukuZGkzYw89WbYIH9btWaF2ddlvH.jpeg",
     colors: {
-      primary: "#9CAF88", // Sage green
-      secondary: "#F5F5DC", // Cream columns
-      accent: "#DAA520", // Golden sunlight
-      background: "#F0FFF0", // Honeydew
+      primary: "#F5DEB3", // Wheat beige (lighter)
+      secondary: "#E6D3A3", // Light sandy beige
+      accent: "#D2691E", // Terracotta orange (brighter, less brown)
+      background: "#FAF0E6", // Linen cream
     },
-    description: "Sage green tranquility with golden sunlight",
-    atmosphere: "Serene and natural",
+    description: "Sandy pathways and warm earth tones of estate gardens",
+    atmosphere: "Natural and grounding",
     unlockLevel: 30,
     category: "Ground Floor",
     isActive: false,
-    isUnlocked: false,
+    isUnlocked: true, // Temporarily unlocked for testing
     canUnlock: true,
   },
   {
@@ -145,7 +145,7 @@ export const roomThemes: RoomTheme[] = [
     unlockLevel: 35,
     category: "Ground Floor",
     isActive: false,
-    isUnlocked: false,
+    isUnlocked: true, // Temporarily unlocked for testing
     canUnlock: true,
   },
 
@@ -155,36 +155,36 @@ export const roomThemes: RoomTheme[] = [
     name: "Balcony",
     image: "/placeholder.svg?height=300&width=400",
     colors: {
-      primary: "#F5F5DC", // Cream
-      secondary: "#FF6347", // Sunset orange
-      accent: "#DAA520", // Golden highlights
-      background: "#FFF8DC", // Cornsilk
+      primary: "#191970", // Nightsky blue
+      secondary: "#E6E6FA", // Lavender
+      accent: "#C0C0C0", // Silver
+      background: "#F8F8FF", // Ghost white
     },
-    description: "Cream elegance with sunset views over the grounds",
-    atmosphere: "Romantic and inspiring",
+    description: "Nightsky elegance with lavender moonlight over the grounds",
+    atmosphere: "Moonlit romance",
     unlockLevel: 40,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
   {
     id: "ballroom",
     name: "Ballroom",
     image: "/placeholder.svg?height=300&width=400",
     colors: {
-      primary: "#DAA520", // Golden
-      secondary: "#F8F8FF", // Ghost white
-      accent: "#FFD700", // Gold
+      primary: "#F8F8FF", // Crystal white
+      secondary: "#DAA520", // Golden
+      accent: "#FFD700", // Pure gold
       background: "#FFFAF0", // Floral white
     },
-    description: "Golden grandeur with crystal white accents",
-    atmosphere: "Luxurious and celebratory",
+    description: "Crystal white grandeur with golden accents",
+    atmosphere: "Luxurious celebration",
     unlockLevel: 45,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
   {
     id: "map-room",
@@ -197,66 +197,66 @@ export const roomThemes: RoomTheme[] = [
       background: "#F5F5DC", // Beige
     },
     description: "Sepia charts and brass instruments for strategic planning",
-    atmosphere: "Adventurous and tactical",
+    atmosphere: "Adventurous strategy",
     unlockLevel: 50,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
   {
     id: "observatory",
     name: "Observatory",
     image: "/placeholder.svg?height=300&width=400",
     colors: {
-      primary: "#4169E1", // Royal blue
+      primary: "#8B0000", // Dark crimson
       secondary: "#C0C0C0", // Silver
-      accent: "#DAA520", // Golden telescope
-      background: "#191970", // Midnight blue
+      accent: "#708090", // Steel telescope
+      background: "#2F1B14", // Dark background
     },
-    description: "Cosmic blue depths with silver starlight",
-    atmosphere: "Mystical and contemplative",
+    description: "Dark crimson depths with silver starlight",
+    atmosphere: "Cosmic contemplation",
     unlockLevel: 55,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
   {
     id: "theater-room",
     name: "Theater Room",
     image: "/placeholder.svg?height=300&width=400",
     colors: {
-      primary: "#8B0000", // Dark red
+      primary: "#663399", // Royal purple
       secondary: "#DAA520", // Golden stage lights
       accent: "#FFD700", // Gold trim
       background: "#2F1B14", // Dark brown
     },
-    description: "Velvet red curtains and golden stage lights",
-    atmosphere: "Dramatic and entertaining",
+    description: "Royal purple curtains and golden stage lights",
+    atmosphere: "Dramatic entertainment",
     unlockLevel: 60,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
   {
     id: "clock-tower",
     name: "Clock Tower",
     image: "/placeholder.svg?height=300&width=400",
     colors: {
-      primary: "#B87333", // Dark brass
-      secondary: "#CD7F32", // Bronze
-      accent: "#DAA520", // Golden gears
-      background: "#F5DEB3", // Wheat
+      primary: "#B0E0E6", // Ice blue
+      secondary: "#708090", // Steel
+      accent: "#C0C0C0", // Chrome
+      background: "#F0F8FF", // Alice blue
     },
-    description: "Brass gears and bronze mechanisms marking time",
-    atmosphere: "Mechanical and precise",
+    description: "Ice blue precision with steel and chrome mechanisms",
+    atmosphere: "Mechanical precision",
     unlockLevel: 65,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
   {
     id: "war-room",
@@ -265,16 +265,16 @@ export const roomThemes: RoomTheme[] = [
     colors: {
       primary: "#355E3B", // Hunter green
       secondary: "#CD7F32", // Bronze
-      accent: "#DAA520", // Golden medals
+      accent: "#B8860B", // Aged golden medals
       background: "#F5F5DC", // Beige maps
     },
     description: "Military green strategy with bronze battle plans",
-    atmosphere: "Strategic and commanding",
+    atmosphere: "Strategic command",
     unlockLevel: 70,
     category: "Second Floor",
     isActive: false,
-    isUnlocked: false,
-    canUnlock: false,
+    isUnlocked: true,
+    canUnlock: true,
   },
 
   // Basement Rooms

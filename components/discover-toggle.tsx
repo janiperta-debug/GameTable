@@ -15,7 +15,7 @@ export function DiscoverToggle({ activeTab, onTabChange }: DiscoverToggleProps) 
         <Button
           variant={activeTab === "games" ? "default" : "ghost"}
           onClick={() => onTabChange("games")}
-          className="flex items-center space-x-2"
+          className={`flex items-center space-x-2 ${activeTab === "games" ? "theme-accent-gold" : ""}`}
         >
           <Gamepad2 className="h-4 w-4" />
           <span className="font-cinzel">Discover Games</span>
@@ -23,7 +23,7 @@ export function DiscoverToggle({ activeTab, onTabChange }: DiscoverToggleProps) 
         <Button
           variant={activeTab === "players" ? "default" : "ghost"}
           onClick={() => onTabChange("players")}
-          className="flex items-center space-x-2"
+          className={`flex items-center space-x-2 ${activeTab === "players" ? "theme-accent-gold" : ""}`}
         >
           <Users className="h-4 w-4" />
           <span className="font-cinzel">Find Players</span>
